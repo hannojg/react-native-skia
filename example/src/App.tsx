@@ -32,12 +32,14 @@ import { HomeScreen } from "./Home";
 import type { StackParamList } from "./types";
 import { useAssets } from "./Tests/useAssets";
 import { SkottieExample } from "./Examples/SkottieExample";
+import { LottieExample } from "./Examples/LottieExample";
 
 const linking: LinkingOptions<StackParamList> = {
   config: {
     screens: {
       Home: "",
       Skottie: "skottie",
+      Lottie: "lottie",
       Vertices: "vertices",
       API: "api",
       Breathe: "breathe",
@@ -119,6 +121,7 @@ const App = () => {
             />
 
             <Stack.Screen name="Skottie" component={SkottieExample} />
+            <Stack.Screen name="Lottie" component={LottieExample} />
           </Stack.Navigator>
         </NavigationContainer>
       </GestureHandlerRootView>

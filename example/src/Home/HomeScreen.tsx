@@ -12,6 +12,12 @@ export const HomeScreen = () => {
         route="Skottie"
         testId="Skottie"
       />
+      <HomeScreenButton
+        title="▶️ Lottie"
+        description="Lottie implementation"
+        route="Lottie"
+        testId="Lottie"
+      />
     </ScrollView>
   );
 };
