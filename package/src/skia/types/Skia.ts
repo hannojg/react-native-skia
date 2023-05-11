@@ -27,6 +27,7 @@ import type { SkPath } from "./Path/Path";
 import type { SkContourMeasureIter } from "./ContourMeasure";
 import type { PictureFactory, SkPictureRecorder } from "./Picture";
 import type { Color, SkColor } from "./Color";
+import type { Skottie } from "./Skottie";
 
 /**
  * Declares the interface for the native Skia API
@@ -79,4 +80,5 @@ export interface Skia {
   SVG: SVGFactory;
   TextBlob: TextBlobFactory;
   Surface: SurfaceFactory;
+  Skottie: (lottieJson: string) => Skottie;
 }

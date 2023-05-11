@@ -9,6 +9,8 @@ set (PACKAGE_NAME "rnskia")
 set (SKIA_LIB "skia")
 set (SKIA_SVG_LIB "svg")
 set (SKIA_SKSHAPER_LIB "skshaper")
+set (SKIA_SKSG_LIB "sksg")
+set (SKIA_SKOTTIE_LIB "skottie")
 #set (SKIA_SKPARAGRAPH_LIB "skparagraph")
 #set (SKIA_SKUNICODE_LIB "skunicode")
 
@@ -111,6 +113,12 @@ set_property(TARGET svg PROPERTY IMPORTED_LOCATION "${SKIA_LIBS_PATH}/libsvg.a")
 add_library(skshaper STATIC IMPORTED)
 set_property(TARGET skshaper PROPERTY IMPORTED_LOCATION "${SKIA_LIBS_PATH}/libskshaper.a")
 
+add_library(sksg STATIC IMPORTED)
+set_property(TARGET sksg PROPERTY IMPORTED_LOCATION "${SKIA_LIBS_PATH}/libsksg.a")
+
+add_library(skottie STATIC IMPORTED)
+set_property(TARGET skottie PROPERTY IMPORTED_LOCATION "${SKIA_LIBS_PATH}/libskottie.a")
+
 #add_library(skparagraph STATIC IMPORTED)
 #set_property(TARGET skparagraph PROPERTY IMPORTED_LOCATION "${SKIA_LIBS_PATH}/libskparagraph.a")
 
@@ -199,7 +207,9 @@ target_link_libraries(
         ${JSI_LIB}
         ${TURBOMODULES_LIB}
         ${SKIA_SVG_LIB}
+        ${SKIA_SKOTTIE_LIB}
         ${SKIA_SKSHAPER_LIB}
+        ${SKIA_SKSG_LIB}
         #${SKIA_SKPARAGRAPH_LIB}
         #${SKIA_SKUNICODE_LIB}
         ${SKIA_LIB}

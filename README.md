@@ -1,5 +1,24 @@
 # React Native Skia
 
+## Run the following commands
+
+```bash
+    git submodule update --init --recursive
+
+    yarn bootstrap
+
+    yarn build-skia
+
+    yarn copy-skia-headers
+
+    cd example/ios && pod install
+
+    # Now you are free to run the example app
+
+```
+
+## Regular readme
+
 High-performance 2d Graphics for React Native using Skia
 
 [![Tests](https://github.com/Shopify/react-native-skia/actions/workflows/tests.yml/badge.svg)](https://github.com/Shopify/react-native-skia/actions/workflows/tests.yml)
